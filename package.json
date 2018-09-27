@@ -1,6 +1,9 @@
 {
   "dependencies": {
     "@rails/webpacker": "3.5",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
@@ -8,6 +11,30 @@
     "react_ujs": "^2.4.4"
   },
   "devDependencies": {
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "jest": "^23.6.0",
     "webpack-dev-server": "2.11.2"
-  }
+  },
+  "name": "my_app",
+  "description": "== README",
+  "version": "1.0.0",
+  "main": "sum.test.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/homelissa/rails-react-jest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/homelissa/rails-react-jest/issues"
+  },
+  "homepage": "https://github.com/homelissa/rails-react-jest#readme"
 }
