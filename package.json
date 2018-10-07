@@ -27,6 +27,14 @@
   "scripts": {
     "test": "jest"
   },
+  "jest": {
+    "setupFiles": [
+      "./app/javascript/spec/setupJest.js"
+    ],
+    "testPathIgnorePatterns": [
+      "./config/webpack/test.js"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/homelissa/rails-react-jest.git"

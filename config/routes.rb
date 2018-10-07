@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   root 'my_app#index'
+  resources :todos, :defaults => { :format => 'json' } 
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
