@@ -11,9 +11,6 @@ html
     = react_component('MyApp')
     = react_component('CheckboxWithLabel')
     = react_component('HelloWorld')
-    = react_component('TodoList', todos: @todos )
+    = react_component('TodoList', render(template: 'todos/index', formats: :json) )
 
     = yield
-
-
-//= react_component('TodoList', JSON.parse( render(template: 'todos/index.json.jbuilder') ))

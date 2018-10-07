@@ -17,40 +17,34 @@ class TodoList extends React.Component {
             type: 'GET',
             url: '/todos',
             success: function(data) {
-              callback(data);
+              callback(data['todos']);
             }
           })
     }
 
 
     receiveTodos(data) {
-      const allTodos = Object.keys(data).map(id => data[id]) // array of todos
-      this.setState({ todos: allTodos })
-      console.log('hits this')
-
+      this.setState({ todos: data })
     }
 
     render() {
-        if (this.state.todos !== {}) {
-          return (
-            const todos = this.state.todos;
-            <div>
+      if (!this.state.todos) {
+        return null;
+      }
 
-              ${todos}
+      const todos = this.state.todos
+      const todoItems = todos.map(todo => (
+        <TodoListItem
+          key={todo.id}
+          todo={todo}
+        />
+      ))
 
-            </div>
-
-          )
-
-        } else {
-          return null;
-        }
-
-
+      return(
+        <ul>{ todoItems }</ul>
+      )
 
   }
-
-
 
 }
 

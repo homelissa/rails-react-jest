@@ -6,12 +6,12 @@ class TodoListItem extends React.Component {
     }
 
     render() {
-        return(
-            <li>
-                {this.props.todo.title}
-                {this.props.todo.body}
-            </li>
-        )
+      return(
+          <li>
+              {this.props.todo.title}
+              {this.props.todo.body}
+          </li>
+      )
     }
 }
 

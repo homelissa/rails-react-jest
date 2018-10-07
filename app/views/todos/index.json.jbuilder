@@ -1,5 +1,3 @@
-@todos.each do |todo|
-    json.set! todo.id do 
-        json.extract! todo, :id, :title, :body
-    end 
-end 
+json.todos(@todos) do |todo|
+  json.extract! todo, :id, :title, :body
+end
